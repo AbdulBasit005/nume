@@ -11,19 +11,22 @@
     <div class="logo">
       <img src="assests/logo/logo1.png" alt="NOME Logo">
     </div>
-    <nav>
-      <div class="nav-links">
+    <nav class="main-nav">
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT US</a>
         <a href="services.html">SERVICES</a>
         <a href="contact.html">CONTACT US</a>
         <button class="sign-in">SIGN IN</button>
         <span>Language</span>
-          <select>
-            <option>EN</option>
-            <option>FR</option>
-            <option>ES</option>
-          </select>
+        <select>
+          <option>EN</option>
+          <option>FR</option>
+          <option>ES</option>
+        </select>
       </div>
     </nav>
   </header>
@@ -34,7 +37,7 @@
         <p>NUME is dedicated to transforming healthcare delivery through technology, compassion, and innovation. Our mission is to make quality healthcare accessible, affordable, and reliable for everyone, everywhere.</p>
       </div>
       <div class="about-hero-img">
-        <img src="assests/Media/doctor_846948.png" alt="Doctor writing" />
+        <img class="about-img" src="assests/Media/doctor_846948.png" alt="Doctor writing" />
       </div>
     </section>
     <section class="about-mission-vision">
@@ -43,12 +46,12 @@
         <p>To empower individuals and families to take control of their health by providing seamless access to medical expertise, advanced diagnostics, and personalized care—all from the comfort of home.</p>
       </div>
       <div class="about-mission-img">
-        <img src="assests/Media/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Mission" />
+        <img class="about-img" src="assests/Media/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Mission" />
       </div>
     </section>
     <section class="about-vision">
       <div class="about-vision-img">
-        <img src="assests/Media/test-tube_7920396.png" alt="Vision" />
+        <img class="about-img" src="assests/Media/test-tube_7920396.png" alt="Vision" />
       </div>
       <div class="about-vision-card">
         <h2>Our Vision</h2>
@@ -59,22 +62,22 @@
       <h2>Why NUME?</h2>
       <div class="about-why-nume-cards">
         <div class="about-why-nume-card">
-          <img src="assests/Media/generosity_18654307.gif" alt="Trusted" />
+          <img class="about-why-img" src="assests/Media/generosity_18654307.gif" alt="Trusted" />
           <h3>Trusted Professionals</h3>
           <p>Certified doctors, specialists, and healthcare staff.</p>
         </div>
         <div class="about-why-nume-card">
-          <img src="assests/Media/repair_18996418.gif" alt="Care" />
+          <img class="about-why-img" src="assests/Media/repair_18996418.gif" alt="Care" />
           <h3>Comprehensive Care</h3>
           <p>From consultations to labs, pharmacy, and follow-ups.</p>
         </div>
         <div class="about-why-nume-card">
-          <img src="assests/Media/Online Consultation.jpg" alt="Accessible" />
+          <img class="about-why-img" src="assests/Media/Online Consultation.jpg" alt="Accessible" />
           <h3>Accessible Anywhere</h3>
           <p>24/7 access to healthcare from any device, anywhere.</p>
         </div>
         <div class="about-why-nume-card">
-          <img src="assests/Media/ramp_18681740.gif" alt="Affordable" />
+          <img class="about-why-img" src="assests/Media/ramp_18681740.gif" alt="Affordable" />
           <h3>Affordable & Transparent</h3>
           <p>Clear pricing, no hidden fees, and competitive rates.</p>
         </div>
@@ -145,8 +148,8 @@
   <script>
     // Hamburger menu functionality
     window.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
+      const hamburger = document.querySelector('.burger');
+      const navLinks = document.getElementById('navLinks');
       hamburger.addEventListener('click', function() {
         const expanded = this.getAttribute('aria-expanded') === 'true';
         this.setAttribute('aria-expanded', !expanded);
