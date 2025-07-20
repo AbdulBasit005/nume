@@ -35,11 +35,52 @@
       <div class="logo">
         <img src="assests/logo/logo1.png" alt="NOME Logo">
       </div>
-      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu" onclick="toggleNavMenu()">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <script>
+        function toggleNavMenu() {
+          const nav = document.querySelector('nav');
+          const hamburger = document.querySelector('.hamburger');
+          const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !expanded);
+          nav.classList.toggle('nav-open');
+        }
+        // Optional: close nav when clicking outside (for better UX)
+        document.addEventListener('click', function(e) {
+          const nav = document.querySelector('nav');
+          const hamburger = document.querySelector('.hamburger');
+          if (!nav || !hamburger) return;
+          if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      </script>
+      <style>
+        nav.nav-open .nav-links {
+          display: flex !important;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background: #fff;
+          box-shadow: 0 2px 16px #0002;
+          z-index: 200;
+          width: 200px;
+          padding: 16px 0;
+        }
+        @media (max-width: 800px) {
+          .nav-links {
+            display: none;
+          }
+          nav.nav-open .nav-links {
+            display: flex !important;
+          }
+        }
+      </style>
     </div>
     <nav>
       <div class="nav-links">
