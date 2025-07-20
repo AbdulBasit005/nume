@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NUME - Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="contact-header">
+        <div class="logo">
+          <img src="assests/logo/logo1.png" alt="NOME Logo">
+        </div>
+        <nav>
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="services.html">SERVICES</a>
+          <a href="contact.html">CONTACT US</a>
+          <button class="sign-in">SIGN IN</button>
+          <div class="language">
+            <span>Language</span>
+            <select>
+              <option>EN</option>
+              <option>FR</option>
+              <option>ES</option>
+            </select>
+          </div>
+        </nav>
+      </header>
+  <main class="contact-main">
+    <style>
+      .professional-contact {
+        background: #f8fafc;
+        padding: 40px 0 24px 0;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+        margin-bottom: 32px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .contact-title {
+        text-align: center;
+        font-size: 2.2rem;
+        color: #1a365d;
+        margin-bottom: 32px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .contact-methods {
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+        flex-wrap: wrap;
+      }
+      .contact-method {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+        padding: 18px 28px;
+        min-width: 240px;
+        transition: box-shadow 0.2s;
+      }
+      .contact-method:hover {
+        box-shadow: 0 4px 16px rgba(26,54,93,0.10);
+      }
+      .contact-method-icon {
+        margin-right: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e3eafc;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+      }
+      .contact-method-details {
+        display: flex;
+        flex-direction: column;
+      }
+      .contact-method-label {
+        font-size: 1rem;
+        color: #4a5568;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+      .contact-method-value a {
+        color: #2563eb;
+        font-size: 1.1rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+      }
+      .contact-method-value a:hover {
+        color: #1a365d;
+        text-decoration: underline;
+      }
+
+      .professional-form {
+        background: #fff;
+        padding: 40px 32px 32px 32px;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+        max-width: 700px;
+        margin: 0 auto 32px auto;
+      }
+      .form-title {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #1a365d;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .form-description {
+        text-align: center;
+        color: #4a5568;
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .contact-form-row {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 180px;
+        min-width: 180px;
+      }
+      .form-group label {
+        font-size: 0.98rem;
+        color: #1a365d;
+        margin-bottom: 6px;
+        font-weight: 500;
+      }
+      .form-group input,
+      .form-group textarea {
+        padding: 10px 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: #f8fafc;
+        color: #1a202c;
+        transition: border 0.2s, box-shadow 0.2s;
+        outline: none;
+        resize: none;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border: 1.5px solid #2563eb;
+        box-shadow: 0 0 0 2px #e0e7ff;
+      }
+      .form-group textarea {
+        min-height: 100px;
+        max-height: 220px;
+      }
+      .submit-btn {
+        margin-top: 10px;
+        background: linear-gradient(90deg, #2563eb 0%, #1a365d 100%);
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 0;
+        cursor: pointer;
+        transition: background 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+      }
+      .submit-btn:hover {
+        background: linear-gradient(90deg, #1a365d 0%, #2563eb 100%);
+        box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+      }
+      @media (max-width: 700px) {
+        .professional-contact, .professional-form {
+          padding: 24px 8px;
+        }
+        .contact-methods {
+          flex-direction: column;
+          gap: 24px;
+        }
+        .contact-form-row {
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
+    </style>
+    <section class="contact-section professional-contact">
+      <h2 class="contact-title">Get in Touch</h2>
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-method-icon" aria-label="Phone" title="Phone">
+            <img src="assests/logo/logo1.png" alt="Phone Icon" style="width:32px;height:32px; border-radius:8px;" />
+          </div>
+          <div class="contact-method-details">
+            <div class="contact-method-label">Call Us</div>
+            <div class="contact-method-value"><a href="tel:+92321000">+92 321 000</a></div>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon" aria-label="Email" title="Email">
+            <img src="assests/Media/test-tube_7920396.png" alt="Email Icon" style="width:32px;height:32px; border-radius:8px;" />
+          </div>
+          <div class="contact-method-details">
+            <div class="contact-method-label">Email</div>
+            <div class="contact-method-value"><a href="mailto:info@numecare.com">info@numecare.com</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-form-section professional-form">
+      <h3 class="form-title">We're Here to Help</h3>
+      <p class="form-description">
+        Have a question, need support, or want to partner with us? Fill out the form below and our team will get back to you promptly.
+      </p>
+      <form class="contact-form" autocomplete="off">
+        <div class="contact-form-row">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" placeholder="you@email.com" required>
+          </div>
+        </div>
+        <div class="contact-form-row">
+          <div class="form-group">
+            <label for="contact-phone">Phone Number</label>
+            <input id="contact-phone" name="phone" type="tel" placeholder="+92 3XX XXX XXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input id="contact-subject" name="subject" type="text" placeholder="Subject" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-col footer-brand">
+        <img src="assests/logo/logo2.png" alt="NUME Logo" class="footer-logo" />
+        <div class="footer-brand-title">NUME Healthcare</div>
+        <div class="footer-brand-desc">Your trusted partner in accessible, reliable, and modern medical care.</div>
+        <div class="footer-copyright">
+          © 2025 NUME Healthcare. All Rights Reserved.<br>
+          Your health. Our mission.
+        </div>
+      </div>
+      <div class="footer-col footer-links">
+        <div class="footer-links-title">Quick Links</div>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms Of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <div class="footer-contact-title">Contact Us</div>
+        <div class="footer-contact-item">
+          <span>📞</span> +92 311 000
+        </div>
+        <div class="footer-contact-item">
+          <span>✉️</span> support@numecare.com
+        </div>
+        <div class="footer-contact-title" style="margin-top:24px;">Stay Connected</div>
+        <div class="footer-social-desc">
+          Follow us on social media for health tips, updates, and announcements.
+        </div>
+        <div class="footer-social">
+          <a href="#"><span>🌐</span></a>
+          <a href="#"><span>🐦</span></a>
+          <a href="#"><span>▶️</span></a>
+          <a href="#"><span>💼</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
