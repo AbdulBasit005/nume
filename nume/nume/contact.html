@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NUME - Contact Us</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+@media (max-width: 900px) {
+  .contact-methods {
+    flex-direction: column !important;
+    gap: 18px !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .contact-method {
+    width: 90vw !important;
+    min-width: unset !important;
+    max-width: 320px !important;
+    padding: 24px 8px 14px 8px !important;
+  }
+}
+@media (max-width: 600px) {
+  .contact-methods {
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .contact-method {
+    width: 98vw !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    padding: 10px 2vw !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 6px #0001 !important;
+  }
+}
+@media (max-width: 400px) {
+  .contact-methods {
+    gap: 4px !important;
+  }
+  .contact-method {
+    width: 99vw !important;
+    padding: 6px 1vw 6px 1vw !important;
+  }
+}
+</style>
 </head>
 <body>
     <header class="contact-header">
@@ -25,6 +64,11 @@
                 <option>ES</option>
               </select>
           </div>
+          <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </header>
   <main class="contact-main">

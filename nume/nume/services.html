@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NOME - Your Health, A Click Away</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+@media (max-width: 900px) {
+  .why-nume-cards-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: center !important;
+  }
+  .why-nume-cards {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .why-nume-cards .hero-text {
+    padding: 12px 4vw !important;
+  }
+}
+@media (max-width: 600px) {
+  .why-nume-cards-row {
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+  }
+  .why-nume-cards {
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .why-nume-cards .hero-text {
+    padding: 8px 2vw !important;
+  }
+}
+@media (max-width: 400px) {
+  .why-nume-cards-row {
+    gap: 4px !important;
+  }
+  .why-nume-cards {
+    gap: 4px !important;
+  }
+  .why-nume-cards .hero-text {
+    padding: 4px 1vw !important;
+  }
+}
+</style>
 </head>
 <body>
   <header>
@@ -25,6 +67,11 @@
             <option>ES</option>
           </select>
       </div>
+      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
   <main>
