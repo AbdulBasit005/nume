@@ -5,11 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NUME - Your Health, A Click Away</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+@media (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 4vw;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    position: relative;
+  }
+}
+</style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="assests/logo/logo1.png" alt="NOME Logo">
+    <div class="header-row">
+      <div class="logo">
+        <img src="assests/logo/logo1.png" alt="NOME Logo">
+      </div>
+      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu" onclick="toggleNavMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <script>
+        function toggleNavMenu() {
+          const nav = document.querySelector('nav');
+          const hamburger = document.querySelector('.hamburger');
+          const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !expanded);
+          nav.classList.toggle('nav-open');
+        }
+        // Optional: close nav when clicking outside (for better UX)
+        document.addEventListener('click', function(e) {
+          const nav = document.querySelector('nav');
+          const hamburger = document.querySelector('.hamburger');
+          if (!nav || !hamburger) return;
+          if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      </script>
+      <style>
+        nav.nav-open .nav-links {
+          display: flex !important;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background: #fff;
+          box-shadow: 0 2px 16px #0002;
+          z-index: 200;
+          width: 200px;
+          padding: 16px 0;
+        }
+        @media (max-width: 800px) {
+          .nav-links {
+            display: none;
+          }
+          nav.nav-open .nav-links {
+            display: flex !important;
+          }
+        }
+      </style>
     </div>
     <nav>
       <div class="nav-links">
@@ -25,11 +96,6 @@
           <option value="es">ES</option>
         </select>
       </div>
-      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
   </header>
   <main>
