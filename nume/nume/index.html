@@ -12,19 +12,26 @@
       <img src="assests/logo/logo1.png" alt="NOME Logo">
     </div>
     <nav>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT US</a>
-      <a href="services.html">SERVICES</a>
-      <a href="contact.html">CONTACT US</a>
-      <button class="sign-in">SIGN IN</button>
-      <div class="language">
-        <span>Language</span>
-        <select>
-          <option>EN</option>
-          <option>FR</option>
-          <option>ES</option>
-        </select>
+      <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="services.html">SERVICES</a>
+        <a href="contact.html">CONTACT US</a>
+        <button class="sign-in">SIGN IN</button>
+        <div class="language">
+          <span>Language</span>
+          <select>
+            <option>EN</option>
+            <option>FR</option>
+            <option>ES</option>
+          </select>
+        </div>
       </div>
+      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
   <main>
@@ -291,6 +298,21 @@
           el.classList.add('fadein-active');
         });
       }, 300);
+      // Hamburger menu functionality
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      hamburger.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('open');
+      });
+      // Close menu on link click (mobile UX)
+      navLinks.querySelectorAll('a, button, select').forEach(el => {
+        el.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
     });
     // Animate sections on scroll
     const observer = new IntersectionObserver(
