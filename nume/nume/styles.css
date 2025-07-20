@@ -1701,15 +1701,38 @@ html, body {
 }
 
 /* About Page Responsive Styles */
-.about-hero {
+.about-hero, .about-mission-vision, .about-vision {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
-  background: linear-gradient(90deg,#f8fafd 60%,#e6edfa 100%);
-  padding: 56px 0 40px 0;
-  border-radius: 0 0 32px 32px;
-  box-shadow: 0 4px 32px #0001;
+  flex-wrap: wrap;
+}
+.about-hero-text, .about-mission-card, .about-vision-card {
+  flex: 1 1 320px;
+  min-width: 220px;
+  max-width: 480px;
+}
+.about-hero-img, .about-mission-img, .about-vision-img {
+  flex: 1 1 220px;
+  min-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .about-hero, .about-mission-vision, .about-vision {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+    padding: 18px 0 !important;
+  }
+  .about-hero-text, .about-mission-card, .about-vision-card,
+  .about-hero-img, .about-mission-img, .about-vision-img {
+    max-width: 98vw;
+    min-width: unset;
+    padding: 0 4vw;
+  }
 }
 .about-hero-text {
   flex: 1;
@@ -2623,5 +2646,34 @@ input, textarea {
     min-width: unset !important;
     max-width: unset !important;
     padding: 8px 2vw !important;
+  }
+}
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #1761a033;
+  display: block;
+  margin: 0 auto;
+}
+.about-why-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #1761a022;
+  margin-bottom: 12px;
+  background: #f8fafd;
+}
+@media (max-width: 700px) {
+  .about-img {
+    max-width: 90vw;
+    border-radius: 10px;
+  }
+  .about-why-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
   }
 }
