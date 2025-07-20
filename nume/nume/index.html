@@ -110,10 +110,25 @@
           <p data-i18n="hero_desc">
             Access doctors, specialists, lab tests, prescriptions, and pharmacy services — all from your home.
           </p>
-          <div class="hero-buttons animated-fadein">
-            <button class="primary" data-i18n="hero_book">Book A Doctor</button>
-            <button class="secondary" data-i18n="hero_order">Order Medicine</button>
+          <div class="hero-buttons animated-fadein" style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="primary" data-i18n="hero_book" style="min-width: 120px; flex: 1 1 120px; max-width: 100%; font-size: 1rem;">Book A Doctor</button>
+            <button class="secondary" data-i18n="hero_order" style="min-width: 120px; flex: 1 1 120px; max-width: 100%; font-size: 1rem;">Order Medicine</button>
           </div>
+          <style>
+            @media (max-width: 600px) {
+              .hero-buttons {
+                flex-direction: column !important;
+                gap: 8px !important;
+                align-items: stretch !important;
+              }
+              .hero-buttons button {
+                width: 100% !important;
+                min-width: 0 !important;
+                font-size: 0.95rem !important;
+                padding: 8px 0 !important;
+              }
+            }
+          </style>
         </div>
       </section>
     </section>
