@@ -337,22 +337,22 @@
   margin-bottom: 40px;
   letter-spacing: 1px;
 }
-.why-nume-cards {
+.why-nume-cards-row {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: stretch;
   gap: 32px;
-  margin-bottom: 32px;
-  flex-wrap: nowrap;
   width: 100%;
-  max-width: 1250px;
-  height: auto;
-  border-radius: 0;
-  border: 1px solid #e0e7ef;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  background: #f7f5fc;
+  margin-bottom: 24px;
+}
+.why-nume-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
 }
 .why-nume-card {
   background: #0a2a4d;
@@ -372,6 +372,55 @@
   text-align: left;
   flex: 1 1 0;
   justify-content: flex-start;
+}
+@media (max-width: 900px) {
+  .why-nume-cards-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .why-nume-cards {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+  }
+  .why-nume-card {
+    width: 90vw;
+    min-width: unset;
+    max-width: 320px;
+    padding: 24px 8px 14px 8px;
+  }
+}
+@media (max-width: 600px) {
+  .why-nume-cards-row {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .why-nume-cards {
+    gap: 8px;
+    width: 100%;
+  }
+  .why-nume-card {
+    width: 98vw;
+    min-width: unset;
+    max-width: unset;
+    padding: 10px 2vw;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px #0001;
+  }
+}
+@media (max-width: 400px) {
+  .why-nume-cards-row {
+    gap: 4px;
+  }
+  .why-nume-cards {
+    gap: 4px;
+  }
+  .why-nume-card {
+    width: 99vw;
+    padding: 6px 1vw 6px 1vw;
+  }
 }
 .why-nume-card::before {
   content: "";
@@ -460,9 +509,8 @@
   background: #1761a0;
 }
 @media (max-width: 1200px) {
-  .why-nume-cards {
+  .why-nume-cards-row {
     gap: 18px;
-    flex-wrap: wrap;
   }
   .why-nume-card {
     width: 240px;
@@ -487,7 +535,7 @@
   }
 }
 @media (max-width: 900px) {
-  .why-nume-cards {
+  .why-nume-cards-row {
     flex-wrap: wrap;
     gap: 16px;
   }
@@ -505,7 +553,7 @@
     font-size: 2rem;
     margin-bottom: 24px;
   }
-  .why-nume-cards {
+  .why-nume-cards-row {
     flex-direction: column;
     align-items: center;
     gap: 12px;
@@ -1441,7 +1489,7 @@
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
-  .why-nume-cards {
+  .why-nume-cards-row {
     gap: 6px;
   }
   .why-nume-card {
