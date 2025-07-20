@@ -110,25 +110,7 @@
           <p data-i18n="hero_desc">
             Access doctors, specialists, lab tests, prescriptions, and pharmacy services — all from your home.
           </p>
-          <div class="hero-buttons animated-fadein" style="display: flex; gap: 18px; flex-wrap: wrap;">
-            <button class="primary" data-i18n="hero_book" style="min-width: 90px; flex: 1 1 90px; max-width: 100%; font-size: 0.92rem; padding: 8px 0;">Book A Doctor</button>
-            <button class="secondary" data-i18n="hero_order" style="min-width: 90px; flex: 1 1 90px; max-width: 100%; font-size: 0.92rem; padding: 8px 0;">Order Medicine</button>
-          </div>
-          <style>
-            @media (max-width: 600px) {
-              .hero-buttons {
-                flex-direction: column !important;
-                gap: 12px !important;
-                align-items: stretch !important;
-              }
-              .hero-buttons button {
-                width: 100% !important;
-                min-width: 0 !important;
-                font-size: 0.90rem !important;
-                padding: 7px 0 !important;
-              }
-            }
-          </style>
+
         </div>
       </section>
     </section>
@@ -206,33 +188,38 @@
     <section class="section-wrapper section-specialists">
       <section class="specialists-section animated-fadein">
         <h2 class="specialists-title">Meet Our Specialists</h2>
+        <p class="specialists-subtitle">Expert healthcare professionals dedicated to your well-being</p>
         <div class="specialists-cards">
           <div class="specialist-card animated-zoomin">
-            <img src="assests/Media/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Dr. Ayesha Khan" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <img src="assests/Media/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Dr. Ayesha Khan" />
             <div class="specialist-info">
               <div class="specialist-name">Dr. Ayesha Khan</div>
-              <div class="specialist-role">(Pediatrician)</div>
+              <div class="specialist-role">Pediatrician</div>
+              <div class="specialist-specialty">Specializing in child healthcare and development</div>
             </div>
           </div>
           <div class="specialist-card animated-zoomin">
-            <img src="assests/Media/mohamad-azaam-1O8CJy1A7Wo-unsplash.jpg" alt="Dr. Zain Ahmed" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <img src="assests/Media/mohamad-azaam-1O8CJy1A7Wo-unsplash.jpg" alt="Dr. Zain Ahmed" />
             <div class="specialist-info">
               <div class="specialist-name">Dr. Zain Ahmed</div>
-              <div class="specialist-role">(Endocrinologist)</div>
+              <div class="specialist-role">Endocrinologist</div>
+              <div class="specialist-specialty">Expert in diabetes and hormonal disorders</div>
             </div>
           </div>
           <div class="specialist-card animated-zoomin">
-            <img src="assests/Media/ozkan-guner-9xlZ8_NrzaA-unsplash.jpg" alt="Dr. Maria Ali" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <img src="assests/Media/ozkan-guner-9xlZ8_NrzaA-unsplash.jpg" alt="Dr. Maria Ali" />
             <div class="specialist-info">
               <div class="specialist-name">Dr. Maria Ali</div>
-              <div class="specialist-role">(Psychiatrist)</div>
+              <div class="specialist-role">Psychiatrist</div>
+              <div class="specialist-specialty">Mental health and behavioral therapy</div>
             </div>
           </div>
           <div class="specialist-card animated-zoomin">
-            <img src="assests/Media/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Dr. Usman Tariq" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <img src="assests/Media/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Dr. Usman Tariq" />
             <div class="specialist-info">
               <div class="specialist-name">Dr. Usman Tariq</div>
-              <div class="specialist-role">(Dermatologist)</div>
+              <div class="specialist-role">Dermatologist</div>
+              <div class="specialist-specialty">Skin care and dermatological treatments</div>
             </div>
           </div>
         </div>
@@ -259,20 +246,62 @@
     </section>
     <section class="section-wrapper section-treatment">
       <section class="treatment-section animated-fadein">
-        <div class="treatment-bento-grid">
-          <div class="treatment-card bento-left animated-slidein">
-            <h3>Choose Your Service</h3>
-            <p>Select the healthcare service you need: Consultation, Lab, Pharmacy.</p>
+        <div class="treatment-intro">
+          <p>Complete your healthcare journey with our integrated services</p>
+        </div>
+        <div class="treatment-cards">
+          <div class="treatment-card treatment-card-choose animated-slidein">
+            <div class="treatment-card-header">
+              <div class="treatment-card-icon">
+                <img src="assests/Media/interview_19008734.gif" alt="Choose Service" />
+              </div>
+              <h3>Choose Your Service</h3>
+            </div>
+            <p>Select from our comprehensive range of healthcare services: Doctor Consultations, Lab Tests, Specialist Appointments, or Pharmacy Services.</p>
+            <div class="treatment-services">
+              <div class="treatment-service">
+                <span class="service-dot"></span>
+                <span>General Consultation</span>
+              </div>
+              <div class="treatment-service">
+                <span class="service-dot"></span>
+                <span>Lab Testing</span>
+              </div>
+              <div class="treatment-service">
+                <span class="service-dot"></span>
+                <span>Specialist Care</span>
+              </div>
+              <div class="treatment-service">
+                <span class="service-dot"></span>
+                <span>Pharmacy</span>
+              </div>
+            </div>
             <button class="treatment-btn">Choose Now</button>
-            <img src="assests/Media/national-cancer-institute-BQGxNnyuFtU-unsplash.jpg" alt="Choose Service" style="width: 100%; max-width: 220px; border-radius: 16px; box-shadow: 0 2px 12px #0001; margin-top: 18px;" />
           </div>
-          <div></div>
-          <div></div>
-          <div class="treatment-card bento-right animated-slidein">
-            <h3>Receive At Home</h3>
-            <p>Lab visits, medicines, and follow-ups — all delivered to your home.</p>
+          
+          <div class="treatment-card treatment-card-receive animated-slidein">
+            <div class="treatment-card-header">
+              <div class="treatment-card-icon">
+                <img src="assests/Media/virtual-lab_11784559.gif" alt="Receive Care" />
+              </div>
+              <h3>Receive At Home</h3>
+            </div>
+            <p>Get your care delivered right to your doorstep. Medicines, lab reports, and follow-ups — all without leaving your home.</p>
+            <div class="treatment-benefits">
+              <div class="treatment-benefit">
+                <span class="benefit-icon">🏠</span>
+                <span>Home Delivery</span>
+              </div>
+              <div class="treatment-benefit">
+                <span class="benefit-icon">📱</span>
+                <span>Digital Reports</span>
+              </div>
+              <div class="treatment-benefit">
+                <span class="benefit-icon">👨‍⚕️</span>
+                <span>Expert Care</span>
+              </div>
+            </div>
             <button class="treatment-btn">Continue</button>
-            <img src="assests/Media/virtual-lab_11784559.gif" alt="Receive At Home" />
           </div>
         </div>
         <div class="treatment-start">

@@ -1,5 +1,4 @@
- 
- body {
+body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
     background: #f4f6fa;
@@ -270,12 +269,11 @@
     z-index: 0;
   }
   .service-icon img {
-    width: 98px;
-    height: 98px;
+    width: 64px;
+    height: 64px;
     object-fit: cover;
     border-radius: 50%;
     z-index: 1;
-   
   }
   .service-card h4 {
     font-size: 1.18rem;
@@ -412,14 +410,25 @@
 }
 @media (max-width: 400px) {
   .why-nume-cards-row {
-    gap: 4px;
+    gap: 12px;
   }
   .why-nume-cards {
-    gap: 4px;
+    gap: 12px;
   }
   .why-nume-card {
-    width: 99vw;
-    padding: 6px 1vw 6px 1vw;
+    width: 95vw;
+    max-width: 280px;
+    padding: 20px 12px;
+  }
+  .why-nume-icon {
+    width: 50px;
+    height: 50px;
+    right: 12px;
+    top: 12px;
+  }
+  .why-nume-icon img {
+    width: 28px;
+    height: 28px;
   }
 }
 .why-nume-card::before {
@@ -448,27 +457,26 @@
   border: 2px solid #f7f5fc;
 }
 .why-nume-icon img {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
 }
-.why-nume-card h4 {
-  font-size: 1.12rem;
-  font-weight: 700;
-  margin: 90px 0 14px 0;
-  letter-spacing: 1.1px;
-  line-height: 1.2;
-  text-align: left;
-}
-.why-nume-card p {
-  font-size: 1.05rem;
-  color: #e0e7ef;
-  margin: 0;
-  line-height: 1.6;
-  font-family: 'Georgia', serif;
-  font-weight: 400;
-  text-align: left;
-}
+  .why-nume-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 80px 0 12px 0;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    text-align: left;
+  }
+  .why-nume-card p {
+    font-size: 1rem;
+    color: #e0e7ef;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+  }
 .why-nume-bottom {
   margin-top: 32px;
   display: flex;
@@ -525,8 +533,8 @@
     height: 54px;
   }
   .why-nume-icon img {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
   }
   .why-nume-card::before {
     left: 12px;
@@ -582,133 +590,134 @@
 }
 
 .specialists-section {
-  background: #f7fafd;
-  padding: 64px 0 48px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 80px 0 64px 0;
   text-align: center;
 }
 
 .specialists-title {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #1a2a4f;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   letter-spacing: 1px;
 }
 
+.specialists-subtitle {
+  font-size: 1.2rem;
+  color: #1a2a4f;
+  margin-bottom: 48px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
 .specialists-cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 48px auto;
+  padding: 0 24px;
 }
 
 .specialist-card {
   background: #fff;
   border-radius: 24px;
-  box-shadow: 0 2px 16px rgba(10,42,77,0.08);
-  width: 210px;
-  padding: 0 0 18px 0;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(10, 42, 77, 0.08);
+  border: 1px solid #e0e7ef;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.specialist-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 32px rgba(10, 42, 77, 0.15);
+}
+
+.specialist-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0a2a4d 0%, #1761a0 100%);
 }
 
 .specialist-card img {
-  width: 210px;
-  height: 260px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 24px;
-  margin-bottom: 16px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #f1f5f9;
+  box-shadow: 0 4px 16px rgba(10, 42, 77, 0.1);
 }
 
 .specialist-info {
   text-align: center;
+  width: 100%;
 }
 
 .specialist-name {
-  font-size: 1.08rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: #1a2a4f;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
   letter-spacing: 0.5px;
 }
 
 .specialist-role {
   font-size: 1rem;
-  font-weight: 700;
-  color: #1a2a4f;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #1761a0;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+}
+
+.specialist-specialty {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .specialists-desc {
   color: #1a2a4f;
-  font-size: 1.05rem;
-  max-width: 600px;
-  margin: 24px auto 0 auto;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 32px auto 0 auto;
   font-weight: 500;
   letter-spacing: 0.01em;
+  line-height: 1.6;
 }
 
 .specialists-btn {
-  background: #0a2a4d;
+  background: linear-gradient(135deg, #0a2a4d 0%, #1761a0 100%);
   color: #fff;
   border: none;
-  border-radius: 22px;
-  padding: 12px 36px;
+  border-radius: 28px;
+  padding: 16px 40px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 28px;
-  box-shadow: 0 2px 8px rgba(10,42,77,0.08);
-  transition: background 0.2s;
+  margin-top: 32px;
+  box-shadow: 0 4px 16px rgba(10, 42, 77, 0.2);
+  transition: all 0.3s ease;
 }
 
 .specialists-btn:hover {
-  background: #1761a0;
-}
-
-@media (max-width: 900px) {
-  .specialists-cards {
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-  .specialist-card {
-    width: 45vw;
-    min-width: 160px;
-    max-width: 220px;
-  }
-  .specialist-card img {
-    width: 100%;
-    height: 220px;
-  }
-}
-@media (max-width: 600px) {
-  .specialists-section {
-    padding: 32px 0 24px 0;
-  }
-  .specialists-title {
-    font-size: 2rem;
-    margin-bottom: 24px;
-  }
-  .specialists-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-  .specialist-card {
-    width: 90vw;
-    min-width: unset;
-    padding: 0 0 12px 0;
-  }
-  .specialist-card img {
-    width: 100%;
-    height: 180px;
-  }
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 42, 77, 0.3);
 }
 
 .howitworks-section {
-  background: #f4f6fa;
+  background: linear-gradient(135deg, #f4f6fa 0%, #e9ecef 100%);
   padding: 80px 0 64px 0;
   text-align: center;
 }
@@ -717,104 +726,172 @@
   font-size: 2.8rem;
   font-weight: 700;
   color: #1a2a4f;
-  margin-bottom: 48px;
+  margin-bottom: 16px;
   letter-spacing: 1px;
+}
+
+.howitworks-subtitle {
+  font-size: 1.2rem;
+  color: #1a2a4f;
+  margin-bottom: 48px;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 .howitworks-card-row {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: stretch;
-  gap: 0;
-  max-width: 1100px;
+  gap: 48px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .howitworks-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 32px;
-  box-shadow: none;
-  padding: 56px 48px;
-  width: 50%;
-  min-width: 0;
+  flex: 1;
+  max-width: 500px;
 }
 
 .howitworks-card-left {
-  background: #fdf0d5;
-  align-items: flex-start;
   text-align: left;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .howitworks-card-left h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #1a2a4f;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
 .howitworks-card-left p {
-  font-size: 1.18rem;
+  font-size: 1.1rem;
   color: #1a2a4f;
-  margin-bottom: 32px;
-  font-weight: 500;
   line-height: 1.7;
-}
-
-.howitworks-btn {
-  background: #0a2a4d;
-  color: #fff;
-  border: none;
-  border-radius: 22px;
-  padding: 16px 44px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(10,42,77,0.08);
-  transition: background 0.2s;
-}
-
-.howitworks-btn:hover {
-  background: #1761a0;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 32px;
 }
 
 .howitworks-card-right {
-  background: #fff;
-  align-items: center;
-  justify-content: center;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .howitworks-card-right img {
-  width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
-  border-radius: 32px;
-  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(10, 42, 77, 0.15);
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+}
+
+.howitworks-btn {
+  background: linear-gradient(135deg, #0a2a4d 0%, #1761a0 100%);
+  color: #fff;
+  border: none;
+  border-radius: 28px;
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(10, 42, 77, 0.2);
+  transition: all 0.3s ease;
+}
+
+.howitworks-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 42, 77, 0.3);
+}
+
+.howitworks-note {
+  font-size: 1rem;
+  color: #1a2a4f;
+  opacity: 0.7;
+  font-weight: 500;
 }
 
 @media (max-width: 900px) {
   .howitworks-card-row {
     flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+  }
+  
+  .howitworks-card {
     max-width: 98vw;
   }
-  .howitworks-card {
-    width: 100%;
-    padding: 32px 12px;
-    border-radius: 24px;
+  
+  .howitworks-card-left h3 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
   }
+  
+  .howitworks-card-left p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  
   .howitworks-card-right img {
-    max-width: 90vw;
-    margin: 0 auto;
+    max-width: 98vw;
+    width: 250px;
+    height: 160px;
   }
-  .howitworks-card-left, .howitworks-card-right {
-    border-radius: 24px;
+  
+  .howitworks-btn {
+    padding: 14px 36px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .howitworks-section {
+    padding: 48px 0 32px 0;
+  }
+  
+  .howitworks-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .howitworks-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+  }
+  
+  .howitworks-card-row {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12px;
+  }
+  
+  .howitworks-card {
+    max-width: 98vw;
+  }
+  
+  .howitworks-card-left h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+  
+  .howitworks-card-left p {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  
+  .howitworks-card-right img {
+    max-width: 98vw;
+    width: 200px;
+    height: 120px;
+  }
+  
+  .howitworks-btn {
+    padding: 14px 36px;
+    font-size: 1.1rem;
   }
 }
 
@@ -829,7 +906,7 @@
 .treatment-intro {
   max-width: 600px;
   margin: 0 auto 40px auto;
-  text-align: left;
+  text-align: center;
 }
 
 .treatment-intro p {
@@ -840,98 +917,144 @@
   line-height: 1.7;
 }
 
-.treatment-bento-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, auto);
-  gap: 40px 40px;
-  max-width: 1100px;
+.treatment-cards {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 24px;
 }
-.bento-left {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-.bento-right {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
+
 .treatment-card {
-  background: #fdf0d5;
-  border-radius: 36px;
-  padding: 36px 36px 0 36px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
   width: 100%;
-  max-width: 100%;
-  box-shadow: 0 2px 16px rgba(10,42,77,0.08);
+  max-width: 500px;
+  box-shadow: 0 4px 24px rgba(10, 42, 77, 0.08);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.treatment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(10, 42, 77, 0.12);
+}
+
+.treatment-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.treatment-card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(10, 42, 77, 0.1);
+}
+
+.treatment-card-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .treatment-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #1a2a4f;
-  margin-bottom: 16px;
+  margin: 0;
   letter-spacing: 0.5px;
 }
+
 .treatment-card p {
   font-size: 1.05rem;
   color: #1a2a4f;
   margin-bottom: 24px;
   font-weight: 500;
   line-height: 1.6;
+  opacity: 0.9;
 }
+
+.treatment-services,
+.treatment-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.treatment-service,
+.treatment-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.service-dot {
+  width: 8px;
+  height: 8px;
+  background: #1761a0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.benefit-icon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.treatment-service span:last-child,
+.treatment-benefit span:last-child {
+  font-size: 0.95rem;
+  color: #1a2a4f;
+  font-weight: 500;
+}
+
 .treatment-btn {
-  background: #0a2a4d;
+  background: linear-gradient(135deg, #0a2a4d 0%, #1761a0 100%);
   color: #fff;
   border: none;
   border-radius: 22px;
-  padding: 10px 32px;
+  padding: 12px 32px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(10,42,77,0.08);
-  transition: background 0.2s;
+  margin-top: auto;
+  box-shadow: 0 2px 8px rgba(10, 42, 77, 0.08);
+  transition: all 0.3s ease;
+  align-self: flex-start;
 }
+
 .treatment-btn.large {
   font-size: 1.2rem;
   padding: 16px 48px;
-  margin-bottom: 0;
+  margin-top: 40px;
+  align-self: center;
 }
+
 .treatment-btn:hover {
-  background: #1761a0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(10, 42, 77, 0.2);
 }
-.treatment-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom-left-radius: 36px;
-  border-bottom-right-radius: 36px;
-  margin-bottom: 0;
-  margin-top: 0;
-  display: block;
-}
+
 .treatment-start {
   margin-top: 40px;
   text-align: center;
-}
-@media (max-width: 900px) {
-  .treatment-bento-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    gap: 24px;
-    max-width: 98vw;
-  }
-  .bento-left, .bento-right {
-    grid-column: 1 / 2 !important;
-    grid-row: auto !important;
-  }
-  .treatment-card {
-    padding: 18px 4vw 0 4vw;
-  }
 }
 
 .testimonials-section {
@@ -982,8 +1105,8 @@
   margin-bottom: 0;
 }
 .testimonial-card img {
-  width: 340px;
-  height: 220px;
+  width: 280px;
+  height: 180px;
   object-fit: cover;
   border-radius: 0 0 0 0;
   margin-bottom: 0;
@@ -1057,7 +1180,7 @@
   }
   .testimonial-card img {
     width: 100%;
-    height: 180px;
+    height: 150px;
   }
 }
 @media (max-width: 600px) {
@@ -1434,7 +1557,7 @@
   }
   .hero {
     padding: 24px 1vw;
-    min-height: 320px;
+    min-height: 400px;
   }
   .hero-text {
     max-width: 98vw;
@@ -1457,8 +1580,9 @@
     padding: 10px 0;
   }
   .hero-bg-video {
-    min-height: 180px;
-    max-height: 220px;
+    height: 100% !important;
+    min-height: 300px;
+    max-height: 400px;
   }
   .services-section {
     flex-direction: column;
@@ -1490,8 +1614,8 @@
     padding: 12px 4px 12px 4px;
   }
   .service-icon img {
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
   }
   .why-nume-section {
     padding: 12px 0 8px 0;
@@ -1501,21 +1625,24 @@
     margin-bottom: 10px;
   }
   .why-nume-cards-row {
-    gap: 6px;
+    gap: 16px;
   }
   .why-nume-card {
-    width: 98vw;
-    padding: 10px 2px 8px 2px;
+    width: 90vw;
+    max-width: 320px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(10, 42, 77, 0.1);
   }
   .why-nume-icon {
-    width: 28px;
-    height: 28px;
-    right: 2px;
-    top: 8px;
+    width: 60px;
+    height: 60px;
+    right: 16px;
+    top: 16px;
   }
   .why-nume-icon img {
-    width: 14px;
-    height: 14px;
+    width: 36px;
+    height: 36px;
   }
   .specialists-section {
     padding: 12px 0 8px 0;
@@ -1533,7 +1660,7 @@
   }
   .specialist-card img {
     width: 100%;
-    height: 80px;
+    height: 100px;
   }
   .specialists-desc {
     font-size: 0.95rem;
@@ -1574,11 +1701,13 @@
   }
   .howitworks-card-right img {
     max-width: 98vw;
+    width: 180px;
+    height: 100px;
   }
   .treatment-section {
     padding: 12px 0 8px 0;
   }
-  .treatment-bento-grid {
+  .treatment-cards {
     grid-template-columns: 1fr;
     gap: 8px;
     max-width: 98vw;
@@ -2531,8 +2660,9 @@ html, body {
     padding: 8px 0;
   }
   .hero-bg-video {
-    min-height: 80px;
-    max-height: 120px;
+    height: 100% !important;
+    min-height: 250px;
+    max-height: 350px;
   }
   .services-section, .services-hero {
     padding: 6px 0 6px 0;
@@ -2747,5 +2877,261 @@ input, textarea {
     justify-content: space-between;
     width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .treatment-cards {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+  }
+  
+  .treatment-card {
+    max-width: 100%;
+    padding: 24px;
+  }
+  
+  .treatment-card-header {
+    margin-bottom: 16px;
+  }
+  
+  .treatment-card-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .treatment-card-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .treatment-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .treatment-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .treatment-services,
+  .treatment-benefits {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .treatment-btn {
+    padding: 10px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .treatment-section {
+    padding: 32px 0 32px 0;
+  }
+  
+  .treatment-intro {
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+  
+  .treatment-intro p {
+    font-size: 1rem;
+  }
+  
+  .treatment-cards {
+    gap: 16px;
+    padding: 0 12px;
+  }
+  
+  .treatment-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .treatment-card-header {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .treatment-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+  
+  .treatment-card-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .treatment-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .treatment-card p {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  
+  .treatment-services,
+  .treatment-benefits {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .treatment-service,
+  .treatment-benefit {
+    gap: 8px;
+    padding: 6px 0;
+  }
+  
+  .service-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .benefit-icon {
+    font-size: 1rem;
+    width: 20px;
+  }
+  
+  .treatment-service span:last-child,
+  .treatment-benefit span:last-child {
+    font-size: 0.9rem;
+  }
+  
+  .treatment-btn {
+    padding: 8px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .treatment-btn.large {
+    font-size: 1rem;
+    padding: 12px 36px;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .specialists-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 0 16px;
+  }
+  
+  .specialist-card {
+    padding: 24px 16px;
+  }
+  
+  .specialist-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .specialist-name {
+    font-size: 1.2rem;
+  }
+  
+  .specialist-role {
+    font-size: 0.95rem;
+  }
+  
+  .specialist-specialty {
+    font-size: 0.9rem;
+  }
+  
+  .specialists-btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .specialists-section {
+    padding: 48px 0 32px 0;
+  }
+  
+  .specialists-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .specialists-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+  }
+  
+  .specialists-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 12px;
+  }
+  
+  .specialist-card {
+    padding: 20px 16px;
+  }
+  
+  .specialist-card img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .specialist-name {
+    font-size: 1.1rem;
+  }
+  
+  .specialist-role {
+    font-size: 0.9rem;
+  }
+  
+  .specialist-specialty {
+    font-size: 0.85rem;
+  }
+  
+  .specialists-desc {
+    font-size: 1rem;
+    margin: 24px auto 0 auto;
+  }
+  
+  .specialists-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .specialists-cards {
+    gap: 16px;
+    padding: 0 8px;
+  }
+  
+  .specialist-card {
+    padding: 16px 12px;
+  }
+  
+  .specialist-card img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .specialist-name {
+    font-size: 1rem;
+  }
+  
+  .specialist-role {
+    font-size: 0.85rem;
+  }
+  
+  .specialist-specialty {
+    font-size: 0.8rem;
+  }
+  
+  .specialists-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
   }
 }
