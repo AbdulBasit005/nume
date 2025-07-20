@@ -12,187 +12,29 @@
           <img src="assests/logo/logo1.png" alt="NOME Logo">
         </div>
         <nav>
-          <a href="index.html">HOME</a>
-          <a href="about.html">ABOUT US</a>
-          <a href="services.html">SERVICES</a>
-          <a href="contact.html">CONTACT US</a>
-          <button class="sign-in">SIGN IN</button>
-          <div class="language">
-            <span>Language</span>
-            <select>
-              <option>EN</option>
-              <option>FR</option>
-              <option>ES</option>
-            </select>
+          <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="services.html">SERVICES</a>
+            <a href="contact.html">CONTACT US</a>
+            <button class="sign-in">SIGN IN</button>
+            <div class="language">
+              <span>Language</span>
+              <select>
+                <option>EN</option>
+                <option>FR</option>
+                <option>ES</option>
+              </select>
+            </div>
           </div>
+          <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </header>
   <main class="contact-main">
-    <style>
-      .professional-contact {
-        background: #f8fafc;
-        padding: 40px 0 24px 0;
-        border-radius: 12px;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-        margin-bottom: 32px;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .contact-title {
-        text-align: center;
-        font-size: 2.2rem;
-        color: #1a365d;
-        margin-bottom: 32px;
-        font-weight: 700;
-        letter-spacing: 1px;
-      }
-      .contact-methods {
-        display: flex;
-        justify-content: center;
-        gap: 48px;
-        flex-wrap: wrap;
-      }
-      .contact-method {
-        display: flex;
-        align-items: center;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-        padding: 18px 28px;
-        min-width: 240px;
-        transition: box-shadow 0.2s;
-      }
-      .contact-method:hover {
-        box-shadow: 0 4px 16px rgba(26,54,93,0.10);
-      }
-      .contact-method-icon {
-        margin-right: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #e3eafc;
-        border-radius: 50%;
-        width: 48px;
-        height: 48px;
-      }
-      .contact-method-details {
-        display: flex;
-        flex-direction: column;
-      }
-      .contact-method-label {
-        font-size: 1rem;
-        color: #4a5568;
-        font-weight: 500;
-        margin-bottom: 2px;
-      }
-      .contact-method-value a {
-        color: #2563eb;
-        font-size: 1.1rem;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.2s;
-      }
-      .contact-method-value a:hover {
-        color: #1a365d;
-        text-decoration: underline;
-      }
-
-      .professional-form {
-        background: #fff;
-        padding: 40px 32px 32px 32px;
-        border-radius: 12px;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-        max-width: 700px;
-        margin: 0 auto 32px auto;
-      }
-      .form-title {
-        text-align: center;
-        font-size: 1.5rem;
-        color: #1a365d;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-      .form-description {
-        text-align: center;
-        color: #4a5568;
-        font-size: 1.05rem;
-        margin-bottom: 28px;
-      }
-      .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
-      .contact-form-row {
-        display: flex;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-      .form-group {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 180px;
-        min-width: 180px;
-      }
-      .form-group label {
-        font-size: 0.98rem;
-        color: #1a365d;
-        margin-bottom: 6px;
-        font-weight: 500;
-      }
-      .form-group input,
-      .form-group textarea {
-        padding: 10px 12px;
-        border: 1px solid #cbd5e1;
-        border-radius: 6px;
-        font-size: 1rem;
-        background: #f8fafc;
-        color: #1a202c;
-        transition: border 0.2s, box-shadow 0.2s;
-        outline: none;
-        resize: none;
-      }
-      .form-group input:focus,
-      .form-group textarea:focus {
-        border: 1.5px solid #2563eb;
-        box-shadow: 0 0 0 2px #e0e7ff;
-      }
-      .form-group textarea {
-        min-height: 100px;
-        max-height: 220px;
-      }
-      .submit-btn {
-        margin-top: 10px;
-        background: linear-gradient(90deg, #2563eb 0%, #1a365d 100%);
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 600;
-        border: none;
-        border-radius: 6px;
-        padding: 12px 0;
-        cursor: pointer;
-        transition: background 0.2s, box-shadow 0.2s;
-        box-shadow: 0 2px 8px rgba(37,99,235,0.08);
-      }
-      .submit-btn:hover {
-        background: linear-gradient(90deg, #1a365d 0%, #2563eb 100%);
-        box-shadow: 0 4px 16px rgba(37,99,235,0.12);
-      }
-      @media (max-width: 700px) {
-        .professional-contact, .professional-form {
-          padding: 24px 8px;
-        }
-        .contact-methods {
-          flex-direction: column;
-          gap: 24px;
-        }
-        .contact-form-row {
-          flex-direction: column;
-          gap: 12px;
-        }
-      }
-    </style>
     <section class="contact-section professional-contact">
       <h2 class="contact-title">Get in Touch</h2>
       <div class="contact-methods">
@@ -293,5 +135,24 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
+  <script>
+    // Hamburger menu functionality
+    window.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      hamburger.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a, button, select').forEach(el => {
+        el.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
