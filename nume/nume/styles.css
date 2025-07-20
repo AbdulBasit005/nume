@@ -2700,3 +2700,52 @@ input, textarea {
     overflow: hidden;
   }
 }
+
+@media (max-width: 800px) {
+  .section-wrapper {
+    margin-bottom: 24px;
+    padding: 12px 0;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .section-hero {
+    background: #f4f6fa;
+    margin-top: 0;
+  }
+  .section-services {
+    background: #fff;
+  }
+  .section-why-nume {
+    background: #f7f5fc;
+  }
+  .section-specialists {
+    background: #f4f6fa;
+  }
+  .section-howitworks {
+    background: #fff;
+  }
+  .section-treatment {
+    background: #f7f5fc;
+  }
+  .section-testimonials {
+    background: #fff;
+  }
+  .section-footer {
+    background: #0a2a4d;
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+}

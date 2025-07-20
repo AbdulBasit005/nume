@@ -5,11 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NUME - Your Health, A Click Away</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+@media (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 4vw;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    position: relative;
+  }
+}
+</style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="assests/logo/logo1.png" alt="NOME Logo">
+    <div class="header-row">
+      <div class="logo">
+        <img src="assests/logo/logo1.png" alt="NOME Logo">
+      </div>
+      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
     <nav>
       <div class="nav-links">
@@ -25,210 +55,217 @@
           <option value="es">ES</option>
         </select>
       </div>
-      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
   </header>
   <main>
-    <section class="hero animated-fadein">
-      <div class="hero-loader" id="heroLoader">
-        <div class="spinner"></div>
-      </div>
-      <video class="hero-bg-video" id="heroVideo" src="assests/hero/video1.mp4" autoplay loop muted playsinline></video>
-      <div class="hero-text animated-fadein">
-        <h1 data-i18n="hero_title">Your Health,<br>A Click Away</h1>
-        <p data-i18n="hero_desc">
-          Access doctors, specialists, lab tests, prescriptions, and pharmacy services — all from your home.
-        </p>
-        <div class="hero-buttons animated-fadein">
-          <button class="primary" data-i18n="hero_book">Book A Doctor</button>
-          <button class="secondary" data-i18n="hero_order">Order Medicine</button>
+    <section class="section-wrapper section-hero">
+      <section class="hero animated-fadein">
+        <div class="hero-loader" id="heroLoader">
+          <div class="spinner"></div>
         </div>
-      </div>
-      <!-- Remove the hero-image div for a cleaner look with video background -->
+        <video class="hero-bg-video" id="heroVideo" src="assests/hero/video1.mp4" autoplay loop muted playsinline></video>
+        <div class="hero-text animated-fadein">
+          <h1 data-i18n="hero_title">Your Health,<br>A Click Away</h1>
+          <p data-i18n="hero_desc">
+            Access doctors, specialists, lab tests, prescriptions, and pharmacy services — all from your home.
+          </p>
+          <div class="hero-buttons animated-fadein">
+            <button class="primary" data-i18n="hero_book">Book A Doctor</button>
+            <button class="secondary" data-i18n="hero_order">Order Medicine</button>
+          </div>
+        </div>
+      </section>
     </section>
-    <section class="services-section animated-fadein">
-      <div class="services-intro">
-        <h2 data-i18n="services_title">Services</h2>
-        <h3 data-i18n="services_subtitle">Comprehensive Care, Anytime, Anywhere.</h3>
-        <p data-i18n="services_desc">From doctor consultations to lab tests, prescriptions, and medicine delivery — NOME offers all-in-one medical care, accessible anytime, anywhere.</p>
-    
-      </div>
-      <div class="services-cards stagger-children">
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="assests/Media/interview_19008734.gif" alt="General Consultation">
-          </div>
-          <h4 data-i18n="service1_title">General Consultation</h4>
-          <p data-i18n="service1_desc">Connect instantly with certified general physicians for common health issues.</p>
+    <section class="section-wrapper section-services">
+      <section class="services-section animated-fadein">
+        <div class="services-intro">
+          <h2 data-i18n="services_title">Services</h2>
+          <h3 data-i18n="services_subtitle">Comprehensive Care, Anytime, Anywhere.</h3>
+          <p data-i18n="services_desc">From doctor consultations to lab tests, prescriptions, and medicine delivery — NOME offers all-in-one medical care, accessible anytime, anywhere.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="assests/Media/doctor_846948.png" alt="Specialist Appointment">
+        <div class="services-cards stagger-children">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="assests/Media/interview_19008734.gif" alt="General Consultation">
+            </div>
+            <h4 data-i18n="service1_title">General Consultation</h4>
+            <p data-i18n="service1_desc">Connect instantly with certified general physicians for common health issues.</p>
           </div>
-          <h4 data-i18n="service2_title">Specialist Appointment</h4>
-          <p data-i18n="service2_desc">Book virtual or physical appointments with top specialists.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="assests/Media/test-tube_7920396.png" alt="Lab Testings">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="assests/Media/doctor_846948.png" alt="Specialist Appointment">
+            </div>
+            <h4 data-i18n="service2_title">Specialist Appointment</h4>
+            <p data-i18n="service2_desc">Book virtual or physical appointments with top specialists.</p>
           </div>
-          <h4 data-i18n="service3_title">Lab Testings</h4>
-          <p data-i18n="service3_desc">Home sample collection and instant lab reports made easy.</p>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="assests/Media/test-tube_7920396.png" alt="Lab Testings">
+            </div>
+            <h4 data-i18n="service3_title">Lab Testings</h4>
+            <p data-i18n="service3_desc">Home sample collection and instant lab reports made easy.</p>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
-    <section class="why-nume-section animated-fadein">
-      <h2 class="why-nume-title">Why Nume?</h2>
-      <div class="why-nume-cards-row">
-        <div class="why-nume-card animated-slidein">
-          <div class="why-nume-icon">
-            <img src="assests/Media/interview_19008734.gif" alt="Trusted Professionals">
+    <section class="section-wrapper section-why-nume">
+      <section class="why-nume-section animated-fadein">
+        <h2 class="why-nume-title">Why Nume?</h2>
+        <div class="why-nume-cards-row">
+          <div class="why-nume-card animated-slidein">
+            <div class="why-nume-icon">
+              <img src="assests/Media/interview_19008734.gif" alt="Trusted Professionals">
+            </div>
+            <h4>Trusted Professionals</h4>
+            <p>Verified and experienced doctors &amp; specialists.</p>
           </div>
-          <h4>Trusted Professionals</h4>
-          <p>Verified and experienced doctors &amp; specialists.</p>
-        </div>
-        <div class="why-nume-card animated-slidein">
-          <div class="why-nume-icon">
-            <img src="assests/Media/ramp_18681740.gif" alt="Accessible Anywhere">
+          <div class="why-nume-card animated-slidein">
+            <div class="why-nume-icon">
+              <img src="assests/Media/ramp_18681740.gif" alt="Accessible Anywhere">
+            </div>
+            <h4>Accessible Anywhere</h4>
+            <p>All services are available online, 24/7.</p>
           </div>
-          <h4>Accessible Anywhere</h4>
-          <p>All services are available online, 24/7.</p>
-        </div>
-        <div class="why-nume-card animated-slidein">
-          <div class="why-nume-icon">
-            <img src="assests/Media/generosity_18654307.gif" alt="Affordable Pricing">
+          <div class="why-nume-card animated-slidein">
+            <div class="why-nume-icon">
+              <img src="assests/Media/generosity_18654307.gif" alt="Affordable Pricing">
+            </div>
+            <h4>Affordable Pricing</h4>
+            <p>Transparent, fair, and competitive costs.</p>
           </div>
-          <h4>Affordable Pricing</h4>
-          <p>Transparent, fair, and competitive costs.</p>
-        </div>
-        <div class="why-nume-card animated-slidein">
-          <div class="why-nume-icon">
-            <img src="assests/Media/repair_18996418.gif" alt="Integrated Services">
+          <div class="why-nume-card animated-slidein">
+            <div class="why-nume-icon">
+              <img src="assests/Media/repair_18996418.gif" alt="Integrated Services">
+            </div>
+            <h4>Integrated Services</h4>
+            <p>From diagnosis to treatment in one platform.</p>
           </div>
-          <h4>Integrated Services</h4>
-          <p>From diagnosis to treatment in one platform.</p>
         </div>
-      </div>
-      <div class="why-nume-bottom">
-        <p>Trusted, affordable, and accessible healthcare — all in one place. Experience expert care, secure services, and round-the-clock support from the comfort of your home.</p>
-        <button class="why-nume-learn-btn">Learn More</button>
-      </div>
+        <div class="why-nume-bottom">
+          <p>Trusted, affordable, and accessible healthcare — all in one place. Experience expert care, secure services, and round-the-clock support from the comfort of your home.</p>
+          <button class="why-nume-learn-btn">Learn More</button>
+        </div>
+      </section>
     </section>
-    <section class="specialists-section animated-fadein">
-      <h2 class="specialists-title">Meet Our Specialists</h2>
-      <div class="specialists-cards">
-        <div class="specialist-card animated-zoomin">
-          <img src="assests/Media/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Dr. Ayesha Khan" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
-          <div class="specialist-info">
-            <div class="specialist-name">Dr. Ayesha Khan</div>
-            <div class="specialist-role">(Pediatrician)</div>
+    <section class="section-wrapper section-specialists">
+      <section class="specialists-section animated-fadein">
+        <h2 class="specialists-title">Meet Our Specialists</h2>
+        <div class="specialists-cards">
+          <div class="specialist-card animated-zoomin">
+            <img src="assests/Media/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Dr. Ayesha Khan" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <div class="specialist-info">
+              <div class="specialist-name">Dr. Ayesha Khan</div>
+              <div class="specialist-role">(Pediatrician)</div>
+            </div>
+          </div>
+          <div class="specialist-card animated-zoomin">
+            <img src="assests/Media/mohamad-azaam-1O8CJy1A7Wo-unsplash.jpg" alt="Dr. Zain Ahmed" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <div class="specialist-info">
+              <div class="specialist-name">Dr. Zain Ahmed</div>
+              <div class="specialist-role">(Endocrinologist)</div>
+            </div>
+          </div>
+          <div class="specialist-card animated-zoomin">
+            <img src="assests/Media/ozkan-guner-9xlZ8_NrzaA-unsplash.jpg" alt="Dr. Maria Ali" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <div class="specialist-info">
+              <div class="specialist-name">Dr. Maria Ali</div>
+              <div class="specialist-role">(Psychiatrist)</div>
+            </div>
+          </div>
+          <div class="specialist-card animated-zoomin">
+            <img src="assests/Media/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Dr. Usman Tariq" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <div class="specialist-info">
+              <div class="specialist-name">Dr. Usman Tariq</div>
+              <div class="specialist-role">(Dermatologist)</div>
+            </div>
           </div>
         </div>
-        <div class="specialist-card animated-zoomin">
-          <img src="assests/Media/mohamad-azaam-1O8CJy1A7Wo-unsplash.jpg" alt="Dr. Zain Ahmed" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
-          <div class="specialist-info">
-            <div class="specialist-name">Dr. Zain Ahmed</div>
-            <div class="specialist-role">(Endocrinologist)</div>
-          </div>
+        <div class="specialists-desc">
+          Connect with top-certified doctors and specialists across every major field — dedicated to providing expert care tailored to your needs.
         </div>
-        <div class="specialist-card animated-zoomin">
-          <img src="assests/Media/ozkan-guner-9xlZ8_NrzaA-unsplash.jpg" alt="Dr. Maria Ali" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
-          <div class="specialist-info">
-            <div class="specialist-name">Dr. Maria Ali</div>
-            <div class="specialist-role">(Psychiatrist)</div>
-          </div>
-        </div>
-        <div class="specialist-card animated-zoomin">
-          <img src="assests/Media/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Dr. Usman Tariq" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
-          <div class="specialist-info">
-            <div class="specialist-name">Dr. Usman Tariq</div>
-            <div class="specialist-role">(Dermatologist)</div>
-          </div>
-        </div>
-      </div>
-      <div class="specialists-desc">
-        Connect with top-certified doctors and specialists across every major field — dedicated to providing expert care tailored to your needs.
-      </div>
-      <button class="specialists-btn">View All Specialists</button>
+        <button class="specialists-btn">View All Specialists</button>
+      </section>
     </section>
-    <section class="howitworks-section animated-fadein">
-      <h2 class="howitworks-title">How It Works?</h2>
-      <div class="howitworks-card-row">
-        <div class="howitworks-card howitworks-card-left animated-slidein">
-          <h3>Sign Up &amp; Create Profile</h3>
-          <p>Sign up in minutes to access everything NUME offers — from online doctor consultations and lab tests to e-prescriptions and doorstep medicine delivery. Your account keeps your health records organized, appointments managed, and care just a tap away. No paperwork. No hassle. Just better healthcare.</p>
-          <button class="howitworks-btn">Sign Up</button>
+    <section class="section-wrapper section-howitworks">
+      <section class="howitworks-section animated-fadein">
+        <h2 class="howitworks-title">How It Works?</h2>
+        <div class="howitworks-card-row">
+          <div class="howitworks-card howitworks-card-left animated-slidein">
+            <h3>Sign Up &amp; Create Profile</h3>
+            <p>Sign up in minutes to access everything NUME offers — from online doctor consultations and lab tests to e-prescriptions and doorstep medicine delivery. Your account keeps your health records organized, appointments managed, and care just a tap away. No paperwork. No hassle. Just better healthcare.</p>
+            <button class="howitworks-btn">Sign Up</button>
+          </div>
+          <div class="howitworks-card howitworks-card-right animated-zoomin">
+            <img src="assests/Media/Online Consultation.jpg" alt="Sign Up Illustration" />
+          </div>
         </div>
-        <div class="howitworks-card howitworks-card-right animated-zoomin">
-          <img src="assests/Media/Online Consultation.jpg" alt="Sign Up Illustration" />
-        </div>
-      </div>
+      </section>
     </section>
-    <section class="treatment-section animated-fadein">
-      <div class="treatment-bento-grid">
-        <div class="treatment-card bento-left animated-slidein">
-          <h3>Choose Your Service</h3>
-          <p>Select the healthcare service you need: Consultation, Lab, Pharmacy.</p>
-          <button class="treatment-btn">Choose Now</button>
-          <img src="assests/Media/national-cancer-institute-BQGxNnyuFtU-unsplash.jpg" alt="Choose Service" style="width: 100%; max-width: 220px; border-radius: 16px; box-shadow: 0 2px 12px #0001; margin-top: 18px;" />
+    <section class="section-wrapper section-treatment">
+      <section class="treatment-section animated-fadein">
+        <div class="treatment-bento-grid">
+          <div class="treatment-card bento-left animated-slidein">
+            <h3>Choose Your Service</h3>
+            <p>Select the healthcare service you need: Consultation, Lab, Pharmacy.</p>
+            <button class="treatment-btn">Choose Now</button>
+            <img src="assests/Media/national-cancer-institute-BQGxNnyuFtU-unsplash.jpg" alt="Choose Service" style="width: 100%; max-width: 220px; border-radius: 16px; box-shadow: 0 2px 12px #0001; margin-top: 18px;" />
+          </div>
+          <div></div>
+          <div></div>
+          <div class="treatment-card bento-right animated-slidein">
+            <h3>Receive At Home</h3>
+            <p>Lab visits, medicines, and follow-ups — all delivered to your home.</p>
+            <button class="treatment-btn">Continue</button>
+            <img src="assests/Media/virtual-lab_11784559.gif" alt="Receive At Home" />
+          </div>
         </div>
-        <div></div>
-        <div></div>
-        <div class="treatment-card bento-right animated-slidein">
-          <h3>Receive At Home</h3>
-          <p>Lab visits, medicines, and follow-ups — all delivered to your home.</p>
-          <button class="treatment-btn">Continue</button>
-          <img src="assests/Media/virtual-lab_11784559.gif" alt="Receive At Home" />
+        <div class="treatment-start">
+          <button class="treatment-btn large">Start Now</button>
         </div>
-      </div>
-      <div class="treatment-start">
-        <button class="treatment-btn large">Start Now</button>
-      </div>
+      </section>
     </section>
-    <section class="testimonials-section animated-fadein">
-      <h2 class="testimonials-title">Patient Testimonials</h2>
-      <div class="testimonials-cards stagger-children" style="display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;">
-        <div class="testimonial-card" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px #0001; padding: 28px 22px; max-width: 340px; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
-          <div class="testimonial-accent" style="width: 48px; height: 4px; background: #1761a0; border-radius: 2px; margin-bottom: 18px;"></div>
-          <img src="assests/Media/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Taylor Diaz" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
-          <div class="testimonial-info" style="text-align: center;">
-            <div class="testimonial-name" style="font-weight: 600; color: #1761a0; margin-bottom: 6px;">Taylor Diaz, 26. L.A</div>
-            <div class="testimonial-text" style="font-size: 1.02rem; color: #1a2a4f; margin-bottom: 10px;">I booked an online consultation for a sudden fever and had a certified doctor on video call within minutes. The prescription was sent digitally, and my medicines were delivered the same day. Fast, reliable, and stress-free.</div>
-            <div class="testimonial-rating" style="color: #fbbf24; font-weight: 500;">Rating: 4.5/5</div>
+    <section class="section-wrapper section-testimonials">
+      <section class="testimonials-section animated-fadein">
+        <h2 class="testimonials-title">Patient Testimonials</h2>
+        <div class="testimonials-cards stagger-children" style="display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;">
+          <div class="testimonial-card" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px #0001; padding: 28px 22px; max-width: 340px; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
+            <div class="testimonial-accent" style="width: 48px; height: 4px; background: #1761a0; border-radius: 2px; margin-bottom: 18px;"></div>
+            <img src="assests/Media/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Taylor Diaz" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <div class="testimonial-info" style="text-align: center;">
+              <div class="testimonial-name" style="font-weight: 600; color: #1761a0; margin-bottom: 6px;">Taylor Diaz, 26. L.A</div>
+              <div class="testimonial-text" style="font-size: 1.02rem; color: #1a2a4f; margin-bottom: 10px;">I booked an online consultation for a sudden fever and had a certified doctor on video call within minutes. The prescription was sent digitally, and my medicines were delivered the same day. Fast, reliable, and stress-free.</div>
+              <div class="testimonial-rating" style="color: #fbbf24; font-weight: 500;">Rating: 4.5/5</div>
+            </div>
+          </div>
+          <div class="testimonial-card" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px #0001; padding: 28px 22px; max-width: 340px; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
+            <div class="testimonial-accent" style="width: 48px; height: 4px; background: #1761a0; border-radius: 2px; margin-bottom: 18px;"></div>
+            <img src="assests/Media/vaibhav-vivian-3HIroMoyre8-unsplash.jpg" alt="Gloria" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <div class="testimonial-info" style="text-align: center;">
+              <div class="testimonial-name" style="font-weight: 600; color: #1761a0; margin-bottom: 6px;">Gloria , 25. NYC</div>
+              <div class="testimonial-text" style="font-size: 1.02rem; color: #1a2a4f; margin-bottom: 10px;">I used to struggle finding time for doctor visits. Now I book appointments, order medicines, and get lab reports — all from my phone. NUME makes healthcare fit into my busy schedule effortlessly.</div>
+              <div class="testimonial-rating" style="color: #fbbf24; font-weight: 500;">Rating: 4.8/5</div>
+            </div>
+          </div>
+          <div class="testimonial-card" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px #0001; padding: 28px 22px; max-width: 340px; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
+            <div class="testimonial-accent" style="width: 48px; height: 4px; background: #1761a0; border-radius: 2px; margin-bottom: 18px;"></div>
+            <img src="assests/Media/tmvmnt-media-rm7rZYdl3rY-unsplash.jpg" alt="Alice Grey" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
+            <div class="testimonial-info" style="text-align: center;">
+              <div class="testimonial-name" style="font-weight: 600; color: #1761a0; margin-bottom: 6px;">Alice Grey, 20. W.D</div>
+              <div class="testimonial-text" style="font-size: 1.02rem; color: #1a2a4f; margin-bottom: 10px;">The specialists were kind, professional, and available whenever I needed them. I never had to visit a clinic in person, and the home lab services were a blessing. I felt supported every step of the way.</div>
+              <div class="testimonial-rating" style="color: #fbbf24; font-weight: 500;">Rating: 4.2/5</div>
+            </div>
           </div>
         </div>
-        <div class="testimonial-card" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px #0001; padding: 28px 22px; max-width: 340px; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
-          <div class="testimonial-accent" style="width: 48px; height: 4px; background: #1761a0; border-radius: 2px; margin-bottom: 18px;"></div>
-          <img src="assests/Media/vaibhav-vivian-3HIroMoyre8-unsplash.jpg" alt="Gloria" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
-          <div class="testimonial-info" style="text-align: center;">
-            <div class="testimonial-name" style="font-weight: 600; color: #1761a0; margin-bottom: 6px;">Gloria , 25. NYC</div>
-            <div class="testimonial-text" style="font-size: 1.02rem; color: #1a2a4f; margin-bottom: 10px;">I used to struggle finding time for doctor visits. Now I book appointments, order medicines, and get lab reports — all from my phone. NUME makes healthcare fit into my busy schedule effortlessly.</div>
-            <div class="testimonial-rating" style="color: #fbbf24; font-weight: 500;">Rating: 4.8/5</div>
-          </div>
+        <div class="testimonials-powered" style="text-align:center; margin-top:32px;">
+          <a href="#" style="display:inline-flex; align-items:center; gap:8px; color:#1761a0; font-weight:600; text-decoration:none;">
+            <img src="assests/Media/test-tube_7920396.png" alt="Trustpilot Logo" style="width:32px; height:32px; object-fit:contain; border-radius:8px; box-shadow:0 1px 4px #0001;" />
+            Powered By Trust Pilot
+          </a>
         </div>
-        <div class="testimonial-card" style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px #0001; padding: 28px 22px; max-width: 340px; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
-          <div class="testimonial-accent" style="width: 48px; height: 4px; background: #1761a0; border-radius: 2px; margin-bottom: 18px;"></div>
-          <img src="assests/Media/tmvmnt-media-rm7rZYdl3rY-unsplash.jpg" alt="Alice Grey" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px #0002; margin-bottom: 18px;" />
-          <div class="testimonial-info" style="text-align: center;">
-            <div class="testimonial-name" style="font-weight: 600; color: #1761a0; margin-bottom: 6px;">Alice Grey, 20. W.D</div>
-            <div class="testimonial-text" style="font-size: 1.02rem; color: #1a2a4f; margin-bottom: 10px;">The specialists were kind, professional, and available whenever I needed them. I never had to visit a clinic in person, and the home lab services were a blessing. I felt supported every step of the way.</div>
-            <div class="testimonial-rating" style="color: #fbbf24; font-weight: 500;">Rating: 4.2/5</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonials-powered" style="text-align:center; margin-top:32px;">
-        <a href="#" style="display:inline-flex; align-items:center; gap:8px; color:#1761a0; font-weight:600; text-decoration:none;">
-          <img src="assests/Media/test-tube_7920396.png" alt="Trustpilot Logo" style="width:32px; height:32px; object-fit:contain; border-radius:8px; box-shadow:0 1px 4px #0001;" />
-          Powered By Trust Pilot
-        </a>
-      </div>
+      </section>
     </section>
   </main>
-  <footer class="site-footer animated-fadein">
+  <footer class="section-wrapper section-footer site-footer animated-fadein">
     <div class="footer-top">
       <div class="footer-stories">
         <div class="footer-stories-title">Real stories. Real care. Real results.</div>
