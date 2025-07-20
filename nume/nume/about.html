@@ -51,9 +51,6 @@
       <img src="assests/logo/logo1.png" alt="NOME Logo">
     </div>
     <nav class="main-nav">
-      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
       <div class="nav-links" id="navLinks">
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT US</a>
@@ -67,11 +64,36 @@
           <option>ES</option>
         </select>
       </div>
-      <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks" onclick="toggleNavMenu()">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <script>
+        function toggleNavMenu() {
+          const navLinks = document.getElementById('navLinks');
+          const hamburger = document.getElementById('hamburgerBtn');
+          const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !expanded);
+          navLinks.style.display = (navLinks.style.display === 'flex' || navLinks.style.display === '') ? 'none' : 'flex';
+        }
+        // Optional: Hide navLinks on small screens by default
+        document.addEventListener('DOMContentLoaded', function() {
+          const navLinks = document.getElementById('navLinks');
+          if (window.innerWidth <= 800) {
+            navLinks.style.display = 'none';
+          }
+        });
+        // Optional: Hide navLinks when resizing to small screen
+        window.addEventListener('resize', function() {
+          const navLinks = document.getElementById('navLinks');
+          if (window.innerWidth <= 800) {
+            navLinks.style.display = 'none';
+          } else {
+            navLinks.style.display = 'flex';
+          }
+        });
+      </script>
     </nav>
   </header>
   <main>

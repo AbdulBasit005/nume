@@ -2660,34 +2660,6 @@ input, textarea {
   }
 }
 
-<<<<<<< HEAD
-.about-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px #1761a033;
-  display: block;
-  margin: 0 auto;
-}
-.about-why-img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px #1761a022;
-  margin-bottom: 12px;
-  background: #f8fafd;
-}
-@media (max-width: 700px) {
-  .about-img {
-    max-width: 90vw;
-    border-radius: 10px;
-  }
-  .about-why-img {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-=======
 /* Hide hamburger by default */
 .hamburger {
   display: none;
@@ -2726,6 +2698,5 @@ input, textarea {
     position: absolute;
     left: -9999px;
     overflow: hidden;
->>>>>>> 19c0342 (Add responsive hamburger menu and improve layout for about, contact, and services pages)
   }
 }
