@@ -13,17 +13,17 @@
     </div>
     <nav>
       <div class="nav-links">
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT US</a>
-        <a href="services.html">SERVICES</a>
-        <a href="contact.html">CONTACT US</a>
-        <button class="sign-in">SIGN IN</button>
-        <span>Language</span>
-          <select>
-            <option>EN</option>
-            <option>FR</option>
-            <option>ES</option>
-          </select>
+        <a href="index.html" data-i18n="nav_home">HOME</a>
+        <a href="about.html" data-i18n="nav_about">ABOUT US</a>
+        <a href="services.html" data-i18n="nav_services">SERVICES</a>
+        <a href="contact.html" data-i18n="nav_contact">CONTACT US</a>
+        <button class="sign-in" data-i18n="nav_signin">SIGN IN</button>
+        <label for="languageSelect">Language</label>
+        <select id="languageSelect">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+        </select>
       </div>
     </nav>
   </header>
@@ -34,22 +34,22 @@
       </div>
       <video class="hero-bg-video" id="heroVideo" src="assests/hero/video1.mp4" autoplay loop muted playsinline></video>
       <div class="hero-text animated-fadein">
-        <h1>Your Health,<br>A Click Away</h1>
-        <p>
+        <h1 data-i18n="hero_title">Your Health,<br>A Click Away</h1>
+        <p data-i18n="hero_desc">
           Access doctors, specialists, lab tests, prescriptions, and pharmacy services — all from your home.
         </p>
         <div class="hero-buttons animated-fadein">
-          <button class="primary">Book A Doctor</button>
-          <button class="secondary">Order Medicine</button>
+          <button class="primary" data-i18n="hero_book">Book A Doctor</button>
+          <button class="secondary" data-i18n="hero_order">Order Medicine</button>
         </div>
       </div>
       <!-- Remove the hero-image div for a cleaner look with video background -->
     </section>
     <section class="services-section animated-fadein">
       <div class="services-intro">
-        <h2>Services</h2>
-        <h3>Comprehensive Care, Anytime, Anywhere.</h3>
-        <p>From doctor consultations to lab tests, prescriptions, and medicine delivery — NOME offers all-in-one medical care, accessible anytime, anywhere.</p>
+        <h2 data-i18n="services_title">Services</h2>
+        <h3 data-i18n="services_subtitle">Comprehensive Care, Anytime, Anywhere.</h3>
+        <p data-i18n="services_desc">From doctor consultations to lab tests, prescriptions, and medicine delivery — NOME offers all-in-one medical care, accessible anytime, anywhere.</p>
     
       </div>
       <div class="services-cards stagger-children">
@@ -57,22 +57,22 @@
           <div class="service-icon">
             <img src="assests/Media/interview_19008734.gif" alt="General Consultation">
           </div>
-          <h4>General Consultation</h4>
-          <p>Connect instantly with certified general physicians for common health issues.</p>
+          <h4 data-i18n="service1_title">General Consultation</h4>
+          <p data-i18n="service1_desc">Connect instantly with certified general physicians for common health issues.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <img src="assests/Media/doctor_846948.png" alt="Specialist Appointment">
           </div>
-          <h4>Specialist Appointment</h4>
-          <p>Book virtual or physical appointments with top specialists.</p>
+          <h4 data-i18n="service2_title">Specialist Appointment</h4>
+          <p data-i18n="service2_desc">Book virtual or physical appointments with top specialists.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <img src="assests/Media/test-tube_7920396.png" alt="Lab Testings">
           </div>
-          <h4>Lab Testings</h4>
-          <p>Home sample collection and instant lab reports made easy.</p>
+          <h4 data-i18n="service3_title">Lab Testings</h4>
+          <p data-i18n="service3_desc">Home sample collection and instant lab reports made easy.</p>
         </div>
       </div>
     </section>
