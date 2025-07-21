@@ -3135,3 +3135,228 @@ input, textarea {
     font-size: 0.95rem;
   }
 }
+
+/* Minimalist Services Section */
+.services-minimalist {
+  background: #fff;
+  padding: 64px 0 48px 0;
+  max-width: 1100px;
+  margin: 0 auto 48px auto;
+  text-align: center;
+}
+.services-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a2a4f;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+.services-subtitle {
+  font-size: 1.15rem;
+  color: #64748b;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  width: 100%;
+  margin: 0 auto;
+  justify-items: center;
+}
+.service-min-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 36px 24px 28px 24px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #e5e7eb;
+  min-height: 220px;
+}
+.service-min-card:hover {
+  box-shadow: 0 4px 24px rgba(26,42,79,0.07);
+  transform: translateY(-4px) scale(1.02);
+}
+.service-min-icon {
+  font-size: 2.6rem;
+  color: #1761a0;
+  margin-bottom: 18px;
+}
+.service-min-card h2 {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #1a2a4f;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.service-min-card p {
+  font-size: 1rem;
+  color: #42507a;
+  margin: 0;
+  font-weight: 400;
+}
+@media (max-width: 900px) {
+  .services-minimalist {
+    padding: 32px 0 24px 0;
+  }
+  .services-title {
+    font-size: 1.7rem;
+  }
+  .services-subtitle {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  .services-grid {
+    gap: 18px;
+  }
+  .service-min-card {
+    padding: 24px 10px 18px 10px;
+    min-height: 180px;
+  }
+  .service-min-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .services-minimalist {
+    padding: 18px 0 8px 0;
+  }
+  .services-title {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+  .services-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .service-min-card {
+    padding: 12px 4px 10px 4px;
+    min-height: 120px;
+    border-radius: 8px;
+  }
+  .service-min-icon {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+  .service-min-card h2 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .service-min-card p {
+    font-size: 0.95rem;
+  }
+}
+/* Minimalist Newsletter */
+.minimalist-newsletter {
+  background: #f8fafc;
+  padding: 32px 0 0 0;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+}
+.minimalist-newsletter h3 {
+  color: #1a2a4f;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.minimalist-newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+.minimalist-newsletter input[type="email"] {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  background: #fff;
+  color: #1a2a4f;
+}
+.minimalist-newsletter button[type="submit"] {
+  background: #1761a0;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.minimalist-newsletter button[type="submit"]:hover {
+  background: #0a2a4d;
+}
+@media (max-width: 600px) {
+  .minimalist-newsletter {
+    padding: 10px 0 0 0;
+  }
+  .minimalist-newsletter h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .minimalist-newsletter form {
+    flex-direction: column;
+    gap: 6px;
+    max-width: 98vw;
+  }
+  .minimalist-newsletter input[type="email"], .minimalist-newsletter button[type="submit"] {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 8px 0;
+  }
+}
+/* Minimalist Footer */
+.minimalist-footer {
+  background: #fff;
+  color: #1a2a4f;
+  border-top: 1px solid #e5e7eb;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin-top: 0;
+}
+.minimalist-footer .footer-main {
+  padding: 32px 0 16px 0;
+  gap: 32px;
+}
+.minimalist-footer .footer-brand-title,
+.minimalist-footer .footer-links-title,
+.minimalist-footer .footer-contact-title {
+  color: #1a2a4f;
+}
+.minimalist-footer .footer-brand-desc,
+.minimalist-footer .footer-links ul li a,
+.minimalist-footer .footer-contact-item,
+.minimalist-footer .footer-social-desc {
+  color: #64748b;
+}
+.minimalist-footer .footer-social a {
+  color: #1761a0;
+}
+.minimalist-footer .footer-social a:hover {
+  color: #0a2a4d;
+}
+@media (max-width: 900px) {
+  .minimalist-footer .footer-main {
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 0 8px 0;
+  }
+}
+@media (max-width: 600px) {
+  .minimalist-footer .footer-main {
+    gap: 8px;
+    padding: 8px 0 4px 0;
+  }
+}
