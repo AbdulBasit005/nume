@@ -109,16 +109,68 @@ function setLanguage(lang) {
   if (select) select.value = lang;
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  // Fade-in for sections
-  animateOnScroll('.animated-fadein', 'fadein-active');
-  // Slide-in for why-nume cards
-  animateOnScroll('.animated-slidein', 'slidein-active');
-  // Zoom-in for specialist cards
-  animateOnScroll('.animated-zoomin', 'zoomin-active');
-  // Staggered for services and testimonials
+// --- Enhanced On-Scroll Animations for All Sections ---
+function getRandomAnimationClass(index) {
+  const animations = [
+    'animated-fadein',
+    'animated-slidein',
+    'animated-zoomin',
+    'animated-rotatein',
+    'animated-scalein'
+  ];
+  // Alternate or randomize for variety
+  return animations[index % animations.length];
+}
+
+function assignAnimationsToSections() {
+  // Select all main visible sections (not header/footer/nav)
+  const sections = document.querySelectorAll('main section, .section-wrapper');
+  let idx = 0;
+  sections.forEach(section => {
+    // Only add if not already animated
+    if (!section.classList.contains('animated-fadein') &&
+        !section.classList.contains('animated-slidein') &&
+        !section.classList.contains('animated-zoomin') &&
+        !section.classList.contains('animated-rotatein') &&
+        !section.classList.contains('animated-scalein')) {
+      section.classList.add(getRandomAnimationClass(idx));
+      idx++;
+    }
+  });
+}
+
+// Enhanced animateOnScroll to support new classes
+function enhancedAnimateOnScroll() {
+  const animationMap = [
+    { selector: '.animated-fadein', active: 'fadein-active' },
+    { selector: '.animated-slidein', active: 'slidein-active' },
+    { selector: '.animated-zoomin', active: 'zoomin-active' },
+    { selector: '.animated-rotatein', active: 'rotatein-active' },
+    { selector: '.animated-scalein', active: 'scalein-active' },
+  ];
+  animationMap.forEach(({ selector, active }) => {
+    const elements = document.querySelectorAll(selector);
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(active);
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    elements.forEach(el => observer.observe(el));
+  });
+  // Staggered children
   animateOnScroll('.stagger-children', '', true);
-  // Language switcher
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  assignAnimationsToSections();
+  enhancedAnimateOnScroll();
+  // Language switcher (existing)
   const select = document.getElementById('languageSelect');
   let lang = localStorage.getItem('siteLang') || 'en';
   setLanguage(lang);
